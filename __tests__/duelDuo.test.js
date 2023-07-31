@@ -90,7 +90,7 @@ describe("Duel Duo tests", () => {
 
     //now make sure there are five cards in the choices div,
     //this mean the card went back to the choices dive after click the remove from duo button
-    const cards = await driver.findElements(By.className("bot-card outline"));
+    const cards = await driver.findElements(By.css("#choices > div"));
     await expect(cards.length).toBe(5);
   });
 });
